@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="keiran oneill">
+    <meta name="description" content="gaming">
+    <title>consoles</title>
+    <style>
+        body {
+            background-color: #;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: ;
+            color: white;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            justify-items: center;
+        }
+
+        .image-grid img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .image-grid p {
+            text-align: right;
+            margin: 0;
+            padding-right: 10px; /* Optional: Add right padding for better spacing */
+        }
+
+        /* Styles for the span box */
+        .span-box {
+            display: block;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin: 0;
+            width: 100%;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+<div id="navbar">
+    <a class="#Home" href="home.html">Home</a>
+    <a class="#pc's" href="Gaming pc's.html">PC's</a>
+    <a class="#peripherals" href="peripherals.html">Peripherals</a>
+</div>
+<div class="header">
+    <img src="img/sales-sale.gif" alt="sales" width="200" height="200">
+</div>
+<div id="home" class="w3-content">
+    <div id="members" class="w3-container w3-padding-32" style="text-align: center;">
+        <h1>consoles</h1>
+        <div class="image-grid">
+            <div>
+                <img src="img/download.jfif" alt="Name1">
+                <p>£400</p>
+            </div>
+            <div>
+                <img src="img/127e5830-82cb-4f6c-beef-4f9a0c970430.jpg" alt="Name2">
+                <p>£360</p>
+            </div>
+            <div>
+                <img src="img/nintendo-switch-blue-red-sku-header-050521.png" alt="Name3">
+                <p>£200</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="span-box">
+    <img src="img/ico-scan-trust-8813cef5da.png" alt="Trustpilot rating">
+    <span><strong>Rating on Trustpilot</strong></span>
+</div>
+<script>
+    window.onscroll = function() {
+        myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+Date : 2024-03-16 19:25:20
+Directory : c:\Users\keiran\Desktop\gaming\ht
+Total : 18 files,  2214 codes, 4 comments, 233 blanks, all 2451 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          2 |        945 |          0 |          1 |        946 |
+| HTML       |          9 |        928 |          0 |        175 |      1,103 |
+| CSS        |          6 |        316 |          3 |         51 |        370 |
+| JavaScript |          1 |         25 |          1 |          6 |         32 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                     | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                        |         18 |      2,214 |          4 |        233 |      2,451 |
+| . (Files)                                                |         12 |      1,898 |          1 |        182 |      2,081 |
+| css                                                      |          6 |        316 |          3 |         51 |        370 |
++----------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                 | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\keiran\Desktop\gaming\ht\Gaming_pc's.html       | HTML       |        136 |          0 |         23 |        159 |
+| c:\Users\keiran\Desktop\gaming\ht\Gaming_pc.html         | HTML       |        136 |          0 |         23 |        159 |
+| c:\Users\keiran\Desktop\gaming\ht\chat.html              | HTML       |         18 |          0 |         10 |         28 |
+| c:\Users\keiran\Desktop\gaming\ht\console.html           | HTML       |        125 |          0 |         15 |        140 |
+| c:\Users\keiran\Desktop\gaming\ht\css\css.css            | CSS        |         13 |          0 |          3 |         16 |
+| c:\Users\keiran\Desktop\gaming\ht\css\navbar1.css        | CSS        |         11 |          0 |          0 |         11 |
+| c:\Users\keiran\Desktop\gaming\ht\css\style.css          | CSS        |         45 |          0 |          8 |         53 |
+| c:\Users\keiran\Desktop\gaming\ht\css\style2.css         | CSS        |         45 |          0 |          8 |         53 |
+| c:\Users\keiran\Desktop\gaming\ht\css\style3.css         | CSS        |         53 |          3 |          8 |         64 |
+| c:\Users\keiran\Desktop\gaming\ht\css\styles.css         | CSS        |        149 |          0 |         24 |        173 |
+| c:\Users\keiran\Desktop\gaming\ht\customer_service1.html | HTML       |        140 |          0 |         37 |        177 |
+| c:\Users\keiran\Desktop\gaming\ht\home.html              | HTML       |         87 |          0 |          4 |         91 |
+| c:\Users\keiran\Desktop\gaming\ht\login.html             | HTML       |         73 |          0 |         16 |         89 |
+| c:\Users\keiran\Desktop\gaming\ht\package-lock.json      | JSON       |        939 |          0 |          1 |        940 |
+| c:\Users\keiran\Desktop\gaming\ht\package.json           | JSON       |          6 |          0 |          0 |          6 |
+| c:\Users\keiran\Desktop\gaming\ht\peripherals.html       | HTML       |        140 |          0 |         31 |        171 |
+| c:\Users\keiran\Desktop\gaming\ht\server.js              | JavaScript |         25 |          1 |          6 |         32 |
+| c:\Users\keiran\Desktop\gaming\ht\signup.html            | HTML       |         73 |          0 |         16 |         89 |
+| Total                                                    |            |      2,214 |          4 |        233 |      2,451 |
++----------------------------------------------------------+------------+------------+------------+------------+------------+

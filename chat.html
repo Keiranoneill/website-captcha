@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Room</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat Room</h1>
+  <p id="tagline">Welcome to the Chat Room</p>
+  
+  <form id="chat-form"> 
+    <input type="text" id="chat-message" placeholder="Type your message here" />
+    <button type="submit">Send</button>
+  </form> 
+
+  <div id="output"></div>
+  <p id="error-message" class="error"></p>
+
+  <script>
+    var isAllowedToSend = true;
+
+    document.querySelector('#chat-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if(!isAllowedToSend) {
+        document.getElementById("error-message").textContent = "Please wait 10 seconds before sending another message.";
+        return; // exit if not allowed to send
+      }
+  
+      var message = document.querySelector('#chat-message').value;
+      var output = document.querySelector('#output');
+      var previousMessages = output.innerHTML;
+      output.innerHTML = previousMessages + '<p>' + message + '</p>';
+      document.querySelector('#chat-message').value = ''; // clear the input field
+      document.getElementById("error-message").textContent = ""; // clear the error message
+
+      // Disable sending messages for 10 seconds
+      isAllowedToSend = false;
+      setTimeout(function() {
+        isAllowedToSend = true;
+      }, 10000);
+    });
+  </script>
+</body>
+</html>

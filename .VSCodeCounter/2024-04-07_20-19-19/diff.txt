@@ -1,0 +1,36 @@
+Date : 2024-04-07 20:19:19
+Directory : c:\Users\keiran\Desktop\gaming\ht
+Total : 10 files,  7539 codes, 1 comments, 39 blanks, all 7579 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          2 |      7,275 |          0 |          1 |      7,276 |
+| HTML       |          4 |        192 |          0 |         23 |        215 |
+| JavaScript |          4 |         72 |          1 |         15 |         88 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                   |         10 |      7,539 |          1 |         39 |      7,579 |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                            | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\keiran\Desktop\gaming\ht\Gaming_pc's.html                  | HTML       |          0 |          0 |          1 |          1 |
+| c:\Users\keiran\Desktop\gaming\ht\backendServer.js                  | JavaScript |         37 |          1 |         10 |         48 |
+| c:\Users\keiran\Desktop\gaming\ht\home.html                         | HTML       |          1 |          0 |          1 |          2 |
+| c:\Users\keiran\Desktop\gaming\ht\login.html                        | HTML       |         45 |          0 |         -3 |         42 |
+| c:\Users\keiran\Desktop\gaming\ht\nodejs-base64.js                  | JavaScript |          8 |          0 |          3 |         11 |
+| c:\Users\keiran\Desktop\gaming\ht\package-lock.json                 | JSON       |      7,256 |          0 |          0 |      7,256 |
+| c:\Users\keiran\Desktop\gaming\ht\package.json                      | JSON       |         19 |          0 |          1 |         20 |
+| c:\Users\keiran\Desktop\gaming\ht\signup.html                       | HTML       |        146 |          0 |         24 |        170 |
+| c:\Users\keiran\Desktop\gaming\ht\var message = 'Hello, World!';.js | JavaScript |          5 |          0 |          0 |          5 |
+| c:\Users\keiran\Desktop\gaming\ht\webpack.config.js                 | JavaScript |         22 |          0 |          2 |         24 |
+| Total                                                               |            |      7,539 |          1 |         39 |      7,579 |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
