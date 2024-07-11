@@ -1,153 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="keiran oneill" />
-  <meta name="description" content="Gaming Shop - Login" />
-  <title>Register page</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-  <style>
-    #mainCaptcha {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-
 <body>
-  <section class="vh-100">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-lg-12 col-xl-11">
-          <div class="card text-black">
-            <div class="card-body p-md-5">
-              <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                    Please fill in this form to create an account.
-                  </p>
-                  <p>Sign up</p>
-
-                  <form id="registerForm" class="mx-1 mx-md-4">
-                    <div class="d-flex flex-row align-items-center mb-4">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="form3Example1c" class="form-control" placeholder="Your Name" />
-                      </div>
-                    </div>
-
-                    <div class="d-flex flex-row align-items-center mb-4">
-                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="email" id="form3Example3c" class="form-control" placeholder="Your Email" />
-                      </div>
-                    </div>
-
-                    <div class="d-flex flex-row align-items-center mb-4">
-                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="form3Example4c" class="form-control" placeholder="Password" />
-                      </div>
-                    </div>
-
-                    <div class="d-flex flex-row align-items-center mb-4">
-                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="form3Example4cd" class="form-control" placeholder="Repeat your password" />
-                      </div>
-                    </div>
-<!-- 
-                    <div id="mainCaptcha"></div>
-                    <input id="txtInput" class="form-control" placeholder="Enter Captcha" /> -->
-
-                    <!-- <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button id="submit" type="button" class="btn btn-primary btn-lg g-recaptcha" 
-                      data-sitekey="reCAPTCHA_site_key" 
-                      data-callback='handleFormSubmission' 
-                      data-action='submit'>
-                        Register
-                      </button> -->
-
-                    </div>
-                    <button class="g-recaptcha" 
-                      data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
-                      data-callback='onSubmit' 
-                      data-action='submit'
-                      id="register"
-                      >Register</button>
-                  </form>
-                </div>
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                  <label class="form-check-label" for="form2Example3">
-                    I agree all statements in <a href="#!">Terms of service</a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <form id="registrationForm" onsubmit="return handleFormSubmission(event)">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
     </div>
-  </section>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+    <div>
+      <label for="repeatPassword">Repeat Password:</label>
+      <input type="password" id="repeatPassword" required>
+    </div>
+    <div>
+      <label for="agreeTerms">Agree to Terms:</label>
+      <input type="checkbox" id="agreeTerms" required>
+    </div>                                   
+    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+    <button type="submit">Register</button>
+  </form>
 
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    async function hashInputValue(value) {
+      const msgBuffer = new TextEncoder().encode(value);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    }
 
-  <script type="module">
-
-      async function onSubmit(token) {
-        document.getElementById("registerForm").submit();
-      }
-
-
-    // Function to handle form submission
     async function handleFormSubmission(event) {
-      event.preventDefault(); // Prevent the default form submission behavior
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const repeatPassword = document.getElementById('repeatPassword').value;
+      const agreeTerms = document.getElementById('agreeTerms').checked;
+      const recaptchaToken = grecaptcha.getResponse();
 
-      const name = document.getElementById("form3Example1c").value;
-      const email = document.getElementById("form3Example3c").value;
-      const password = document.getElementById("form3Example4c").value;
-      const repeatPassword = document.getElementById("form3Example4cd").value;
-      const checkbox = document.getElementById("form2Example3c").checked;
-
-      if (!name || !email || !password || !repeatPassword || !checkbox) {
-        alert("All fields must be filled out");
+      if (!agreeTerms) {
+        alert('Please agree to the terms of service.');
         return;
       }
 
       if (password !== repeatPassword) {
-        alert("Passwords do not match");
+        alert('Passwords do not match.');
         return;
       }
 
-      try {
-        const hashedPassword = await sha256(password);
-        window.location.href = "/login.html";
-      } catch (error) {
-        console.error("Error hashing password:", error);
+      if (name === '' || email === '' || password === '' || repeatPassword === '') {
+        alert('Please fill in all fields.');
+        return;
       }
-    }
 
-    // SHA-256 hashing function
-    async function sha256(inputValue) {
-      const hashBuffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(inputValue));
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-      return hashHex;
-    }
+      if (recaptchaToken === '') {
+        alert('Please complete the reCAPTCHA.');
+        return;
+      }
+      
+      const hashedPassword = await hashInputValue(password);
+      
+      try {
+        const response = await fetch('/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password: hashedPassword,
+            recaptchaToken
+          })
+        });
+      
+        if (!response.ok) {
+          throw new Error('Registration failed');
+        } else {
+          alert('Registration successful');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Registration failed');
+      }
+      
 
-     // Add event listener to form submission 
-    document.getElementById("register").addEventListener("click", onSubmit); 
-   
-    // Add event listener to generate new captcha on button click
+        alert('Registration successful!');
+        window.location.href = "login.html"; // Redirect to login page after successful registration
 
-    // document.getElementById("mainCaptcha").addEventListener("click", generateRandomCaptcha); 
+      } catch (error) {
+        console.error('Registration failed:', error.message);
+        alert('Registration failed. Please try again.');
+      }
     
-    
+
   </script>
-
 </body>
-
 </html>

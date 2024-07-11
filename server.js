@@ -2,6 +2,8 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
+import axios from 'cors';
+
 
 http.createServer(function (req, res) {
     var filePath = '.' + req.url;
