@@ -16,6 +16,8 @@ const sql = postgres({
   password: 'bobross'
 });
 
+// Test comment
+
 // reCAPTCHA secret key
 const RECAPTCHA_SECRET_KEY = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
 
