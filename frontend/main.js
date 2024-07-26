@@ -2,13 +2,12 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
-import axios from 'cors';
 
 
 http.createServer(function (req, res) {
-    var filePath = '.' + req.url;
-    if (filePath == './') {
-        filePath = './home.html';
+    var filePath = './frontend' + req.url;
+    if (filePath == './frontend/') {
+        filePath = './frontend/home.html';
     }
 
     var extname = String(path.extname(filePath)).toLowerCase();
@@ -22,7 +21,7 @@ http.createServer(function (req, res) {
     fs.readFile(filePath, function(err, data) {
         if (err) {
             res.writeHead(500);
-            res.end('Sorry, check with the site admin for error: '+err.code+' ..\n');
+            res.end('Sorry, check with the site admin for error: '+err.code+' ..\n' + `${filePath}`);
         } else {
             res.writeHead(200, {'Content-Type': contentType});
             res.end(data, 'utf-8');
