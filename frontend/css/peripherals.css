@@ -1,0 +1,96 @@
+body {
+    background-color: beige;
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  #navbar a.active {
+    background-color: white;
+    color: white;
+  }
+
+  .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky+.content {
+    padding-top: 60px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+  }
+
+  .image-grid img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .image-grid .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-grid .product p {
+    margin: 0;
+  }
+  
+  .full-width-span {
+    display: block;
+    background-color: #ddd;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .span-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .span-box img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .span-box span {
+    font-weight: bold;
+  }

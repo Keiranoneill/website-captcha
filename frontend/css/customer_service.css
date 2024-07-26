@@ -1,0 +1,86 @@
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  #navbar a.active {
+    background-color: #000000;
+    color: white;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: left;
+    margin-top: 20px;
+  }
+
+  .gallery-item img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .sales-gif {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-form {
+    width: 22rem;
+  }
+
+  .span-box {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    height: 80px;
+    background-color: lightgrey;
+    margin-top: auto;
+    margin-right: -20px; /* Adjusted margin */
+  }
+
+  .span-box img {
+    margin-left: 20px; /* Added margin to move the image back to the left */
+  }
+
+  #search-container {
+    float: right;
+    margin-top: 7px;
+  }

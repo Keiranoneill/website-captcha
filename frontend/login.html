@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <form id="registrationForm" onsubmit="return handleFormSubmission(event)">
+      <div>
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" required />
+      </div>
+      <div>
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" required />
+      </div>
+      <div>
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" required />
+      </div>
+      <div>
+        <label for="repeatPasswordInput">Repeat Password:</label>
+        <input type="password" id="repeatPasswordInput" required />
+      </div>
+      <div>
+        <label for="agreeTermsInput">Agree to Terms:</label>
+        <input type="checkbox" id="agreeTermsInput" required />
+      </div>
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+      ></div>
+      <button type="submit">Register</button>
+    </form>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
