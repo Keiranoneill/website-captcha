@@ -1,0 +1,67 @@
+
+import Image from "next/image";
+
+export default function Customer Service () {
+  return (
+    <meta name="author" content="keiran oneill" />
+    <meta name="description" content="Gaming Shop" />
+    <title>Customer Service</title>
+    <link rel="stylesheet" href="css/customer_service.css">
+  </head>
+  <body>
+    <div id="navbar">
+      <a class="Home" href="home.html">Home</a>
+      <a class="pc's" href="Gaming pc's.html">PC's</a>
+      <a class="peripherals" href="peripherals.html">Peripherals</a>
+      <a class="consoles" href="console.html">Consoles</a>
+      <div id="search-container">
+        <input type="text" placeholder="Search..." id="search-bar" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-person"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678-.678-.83 1.418-.832 1.664h10Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div>
+      <table bgcolor="#F7F7F7" align="right">
+        <tr bgcolor="grey">
+          <th>Sunday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+
+        <tr bgcolor="lightgrey">
+          <td>8-6</td>
+          <td>8-6</td>
+          <td>8-6</td>
+          <td>8-6</td>
+          <td>8-6</td>
+          <td>9-5</td>
+          <td>10-4</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>Contact us +4478577443 or our live chat</p>
+
+    <script src="js/default.js"></script>
+
+    <div class="span-box">
+      <img src="img/ico-scan-trust-8813cef5da.png" alt="Trustpilot rating" />
+      <span><strong>Rating on Trustpilot</strong></span>
+    </div>
+  </body>
+</html>
